@@ -114,9 +114,9 @@ const Login = () => {
         </div>
 
         <div class="md:flex  md:items-center md:justify-between px-2">
-          <a href="./index.html" class=" block text-center">
+          <Link to="/" class=" block text-center">
             E-Commerce
-          </a>
+          </Link>
 
           <div class="md:w-1/3 md:items-center md:justify-between">
             <div class="relative">
@@ -276,7 +276,7 @@ const Login = () => {
                 <nav>
                   <ul class="gap-2 md:hidden flex flex-col">
                     <li>
-                      <a href="">Home</a>
+                      <Link to="/">Home</Link>
                     </li>
 
                     <li class="group relative bg-pink-500 ">

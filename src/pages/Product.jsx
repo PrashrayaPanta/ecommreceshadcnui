@@ -120,7 +120,7 @@ const Product = () => {
               <nav>
                 <ul class=" bg-red-500 justify-around gap-2 hidden md:flex">
                   <li>
-                    <a href="">Home</a>
+                  <Link to="/">Home</Link>
                   </li>
 
                   <li class="group relative">

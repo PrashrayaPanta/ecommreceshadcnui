@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-  } from "@/components/ui/sheet";
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
-
-
-
-
-
-  import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -83,10 +78,7 @@ const Register = () => {
           <nav>
             <ul class="sm:flex sm:gap-2">
               <li class="">
-                <Link
-                  to="/register"
-                  class="flex items-center justify-center"
-                >
+                <Link to="/register" class="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-4 h-4 me-2 fill-current"
@@ -115,9 +107,9 @@ const Register = () => {
         </div>
 
         <div class="md:flex  md:items-center md:justify-between px-2">
-          <a href="./index.html" class=" block text-center">
+          <Link to="/" class=" block text-center">
             E-Commerce
-          </a>
+          </Link>
 
           <div class="md:w-1/3 md:items-center md:justify-between">
             <div class="relative">
@@ -137,7 +129,7 @@ const Register = () => {
               <nav>
                 <ul class=" bg-red-500 justify-around gap-2 hidden md:flex">
                   <li>
-                    <a href="">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
 
                   <li class="group relative">
@@ -420,7 +412,7 @@ const Register = () => {
           </CardContent>
           <CardFooter>
             <Button type="submit" className="w-full">
-                Register
+              Register
             </Button>
           </CardFooter>
         </Card>

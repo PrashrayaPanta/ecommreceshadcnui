@@ -20,8 +20,6 @@ function SwiperComponent() {
         disableOnInteraction: false, // Autoplay continues even after user interaction
       }}
       modules={[Navigation, Autoplay]} // Include Navigation and Autoplay modules
-      onSlideChange={() => console.log("Slide changed")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
         <img src="../../../slider-1.jpg" alt="Slide 1" className="w-full h-auto" />
