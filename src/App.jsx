@@ -17,11 +17,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { BrowserRouter,Routes,Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 import Product from "./pages/Product";
+import Home from "./pages/Home";
+
+
+
+
 
 function App() {
   const [open, setOpened] = useState(false);
@@ -40,6 +45,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+
+          <Route path="/" element={<Home/>} />
+
+
           <Route path="/login" element={<Login />} />
 
           <Route path="/register" element={<Register />} />

@@ -1,35 +1,18 @@
 import React, { useState } from "react";
-import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-  } from "@/components/ui/sheet";
-
-
-
-
-
-
-  import { Button } from "@/components/ui/button";
-
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
-const Register = () => {
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+// Import the Swiper component
+import SwiperComponent from "../components/ui/swiper"
+
+const Home = () => {
   const [open, setOpened] = useState(false);
 
   const [openBrandItem, setopenBrandItem] = useState(false);
@@ -83,10 +66,7 @@ const Register = () => {
           <nav>
             <ul class="sm:flex sm:gap-2">
               <li class="">
-                <Link
-                  to="/register"
-                  class="flex items-center justify-center"
-                >
+                <Link to="/register" class="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-4 h-4 me-2 fill-current"
@@ -99,7 +79,7 @@ const Register = () => {
               </li>
 
               <li class="sm:before:content-['|'] sm:flex">
-                <Link to="/login" class="flex items-center justify-center">
+                <a href="./login.html" class="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -108,7 +88,7 @@ const Register = () => {
                     <path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
                   </svg>
                   Login
-                </Link>
+                </a>
               </li>
             </ul>
           </nav>
@@ -159,7 +139,7 @@ const Register = () => {
                         />
                       </svg>
                     </a>
-                    <ul class="absolute left-0  hidden group-hover:block bg-white border shadow-lg">
+                    <ul class="absolute left-0 z-2  hidden group-hover:block bg-white border shadow-lg">
                       <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">
                           Electronics
@@ -189,7 +169,7 @@ const Register = () => {
                         <path stroke-linecap="round" d="M19 9l-7 7-7-7" />
                       </svg>
                     </a>
-                    <ul class="absolute left-0  hidden group-hover:block bg-white border shadow-lg">
+                    <ul class="absolute left-0 z-2  hidden group-hover:block bg-white border shadow-lg">
                       <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">
                           Samsung
@@ -202,7 +182,7 @@ const Register = () => {
                       </li>
                       <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">
-                          Microsoftuiohjkb
+                          Microsoft
                         </a>
                       </li>
                     </ul>
@@ -384,47 +364,9 @@ const Register = () => {
         </Sheet>
       </header>
 
-      <main className="flex justify-center">
-        <Card class="w-full max-w-lg">
-          <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-            <CardAction>Card Action</CardAction>
-          </CardHeader>
-          <CardContent>
-            <form>
-              <div className="flex flex-col gap-6">
-                <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="m@example.com"
-                    required
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <div className="flex items-center">
-                    <Label htmlFor="password">Password</Label>
-                    <a
-                      href="#"
-                      className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                    >
-                      Forgot your password?
-                    </a>
-                  </div>
-                  <Input id="password" type="password" required />
-                </div>
-              </div>
-            </form>
-          </CardContent>
-          <CardFooter>
-            <Button type="submit" className="w-full">
-                Register
-            </Button>
-          </CardFooter>
-        </Card>
-      </main>
+    
+      {/* Use the Swiper component */}
+      <SwiperComponent />
 
       <footer class="bg-gray-900 text-white pt-12 pb-6">
         <div class="container mx-auto px-4">
@@ -523,4 +465,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Home;
