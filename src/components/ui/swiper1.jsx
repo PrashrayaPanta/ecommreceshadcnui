@@ -7,6 +7,18 @@ import { useRef } from "react";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+
 function SwiperComponentForLatestProducts() {
   const swiperRef = useRef(null);
 
@@ -26,38 +38,166 @@ function SwiperComponentForLatestProducts() {
     <div>
       <Swiper
         spaceBetween={20} // Adjust spacing between slides
-        slidesPerView={2} // Show two slides at a time
+        slidesPerView={4} // Show two slides at a time
         loop={true} // Enable looping of slides
         onSwiper={(swiper) => (swiperRef.current = swiper)} // Store swiper instance in ref
         modules={[Navigation]} // Include Navigation module
       >
         <SwiperSlide>
-          <Link to="">
-            <img
-              src="../../../image-1.jpg"
-              alt="Slide 1"
-              className="w-full h-auto"
-            />
-          </Link>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardTitle>Login to your account</CardTitle>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+              <CardAction>
+                <Button variant="link">Sign Up</Button>
+              </CardAction>
+            </CardHeader>
+            <CardContent>
+              <Link to="">
+                <img
+                  src="../../../image-1.jpg"
+                  alt="Slide 1"
+                  className="w-full h-auto"
+                />
+              </Link>
+            </CardContent>
+            <CardFooter className="flex-col gap-2">
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
+              <Button variant="outline" className="w-full">
+                Login with Google
+              </Button>
+            </CardFooter>
+          </Card>
         </SwiperSlide>
+
         <SwiperSlide>
-          <Link to="">
-            <img
-              src="../../../image-2.jpg"
-              alt="Slide 2"
-              className="w-full h-auto"
-            />
-          </Link>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardTitle>Login to your account</CardTitle>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+              <CardAction>
+                <Button variant="link">Sign Up</Button>
+              </CardAction>
+            </CardHeader>
+            <CardContent>
+              <Link to="">
+                <img
+                  src="../../../image-2.jpg"
+                  alt="Slide 1"
+                  className="w-full h-auto"
+                />
+              </Link>
+            </CardContent>
+            <CardFooter className="flex-col gap-2">
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
+              <Button variant="outline" className="w-full">
+                Login with Google
+              </Button>
+            </CardFooter>
+          </Card>
         </SwiperSlide>
+
         <SwiperSlide>
-          <Link to="">
-            <img
-              src="../../../image-3.jpg"
-              alt="Slide 3"
-              className="w-full h-auto"
-            />
-          </Link>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardTitle>Login to your account</CardTitle>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+              <CardAction>
+                <Button variant="link">Sign Up</Button>
+              </CardAction>
+            </CardHeader>
+            <CardContent>
+              <Link to="">
+                <img
+                  src="../../../image-2.jpg"
+                  alt="Slide 1"
+                  className="w-full h-auto"
+                />
+              </Link>
+            </CardContent>
+            <CardFooter className="flex-col gap-2">
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
+              <Button variant="outline" className="w-full">
+                Login with Google
+              </Button>
+            </CardFooter>
+          </Card>
         </SwiperSlide>
+
+        <SwiperSlide>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardTitle>Login to your account</CardTitle>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+              <CardAction>
+                <Button variant="link">Sign Up</Button>
+              </CardAction>
+            </CardHeader>
+            <CardContent>
+              <Link to="">
+                <img
+                  src="../../../image-3.jpg"
+                  alt="Slide 1"
+                  className="w-full h-auto"
+                />
+              </Link>
+            </CardContent>
+            <CardFooter className="flex-col gap-2">
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
+              <Button variant="outline" className="w-full">
+                Login with Google
+              </Button>
+            </CardFooter>
+          </Card>
+        </SwiperSlide>
+
+           <SwiperSlide>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardTitle>Login to your account</CardTitle>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+              <CardAction>
+                <Button variant="link">Sign Up</Button>
+              </CardAction>
+            </CardHeader>
+            <CardContent>
+              <Link to="">
+                <img
+                  src="../../../image-3.jpg"
+                  alt="Slide 1"
+                  className="w-full h-auto"
+                />
+              </Link>
+            </CardContent>
+            <CardFooter className="flex-col gap-2">
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
+              <Button variant="outline" className="w-full">
+                Login with Google
+              </Button>
+            </CardFooter>
+          </Card>
+        </SwiperSlide>
+     
       </Swiper>
 
       {/* Previous and Next Buttons */}
