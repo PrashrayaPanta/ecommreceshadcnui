@@ -40,7 +40,7 @@ const Register = () => {
     <div>
       <header>
         {/* <!-- Top Nav Bar --> */}
-        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black">
+        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black p-2">
           <nav>
             <ul class="sm:flex gap-4 bg-amber-400">
               <li class="">

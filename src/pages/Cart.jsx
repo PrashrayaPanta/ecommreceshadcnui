@@ -27,7 +27,7 @@ const Cart = () => {
     <div>
       <header>
         {/* <!-- Top Nav Bar --> */}
-        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black">
+        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black p-2">
           <nav>
             <ul class="sm:flex gap-4 bg-amber-400">
               <li class="">
@@ -116,7 +116,7 @@ const Cart = () => {
               <nav>
                 <ul class="  justify-around gap-2 hidden md:flex">
                   <li>
-                    <a href="">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
 
                   <li class="group relative">
@@ -364,7 +364,7 @@ const Cart = () => {
       </header>
 
 
-                      {/* Cart Section */}
+      {/* Cart Section */}
     <div class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden">
             <div class="p-6">
