@@ -1,32 +1,28 @@
 import React, { useState } from "react";
 
-
-
-
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-  } from "@/components/ui/sheet";
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
+  const [open, setOpened] = useState(false);
 
-    const [open, setOpened] = useState(false);
+  const [openBrandItem, setopenBrandItem] = useState(false);
 
-    const [openBrandItem, setopenBrandItem] = useState(false);
-  
-    const handleClicked = () => {
-      setOpened(!open);
-    };
-  
-    const handleClickedForBrandItem = () => {
-      setopenBrandItem(!openBrandItem);
-    };
-  
+  const handleClicked = () => {
+    setOpened(!open);
+  };
+
+  const handleClickedForBrandItem = () => {
+    setopenBrandItem(!openBrandItem);
+  };
+
   return (
     <div>
       <header>
@@ -69,10 +65,7 @@ const Cart = () => {
           <nav>
             <ul class="sm:flex sm:gap-2">
               <li class="">
-                <Link
-                  to="/register"
-                  class="flex items-center justify-center"
-                >
+                <Link to="/register" class="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-4 h-4 me-2 fill-current"
@@ -121,7 +114,7 @@ const Cart = () => {
               </form>
 
               <nav>
-                <ul class=" bg-red-500 justify-around gap-2 hidden md:flex">
+                <ul class="  justify-around gap-2 hidden md:flex">
                   <li>
                     <a href="">Home</a>
                   </li>
@@ -370,87 +363,126 @@ const Cart = () => {
         </Sheet>
       </header>
 
-      <main class="flex-grow py-6">
-        <h2 class="text-center text-2xl font-bold mb-6">Shopping Cart</h2>
-        <div class="bg-white shadow rounded-lg p-6 overflow-auto">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="border-b">
-                <th class="py-2">Product</th>
-                <th class="py-2">Price</th>
-                <th class="py-2">Qty</th>
-                <th class="py-2">Amount</th>
-                <th class="py-2"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b">
-                <td class="py-4 flex flex-col sm:flex-row items-center">
-                  <img
-                    src="images/image-2.jpg"
-                    class="w-16 h-16 object-cover mb-2 sm:mb-0 sm:mr-4"
-                  />
-                  <span>Optoma 4K HDR Projector</span>
-                </td>
-                <td class="py-4">$1,500</td>
-                <td class="py-4">
-                  <input
-                    type="number"
-                    min="1"
-                    value="1"
-                    class="border border-gray-300 rounded px-2 py-1 w-16"
-                  />
-                </td>
-                <td class="py-4">$1,500</td>
-                <td class="py-4">
-                  <button class="text-red-500">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-b">
-                <td class="py-4 flex flex-col sm:flex-row items-center">
-                  <img
-                    src="images/image-3.jpg"
-                    class="w-16 h-16 object-cover mb-2 sm:mb-0 sm:mr-4"
-                  />
-                  <span>HP Envy Specter 360</span>
-                </td>
-                <td class="py-4">$2,500</td>
-                <td class="py-4">
-                  <input
-                    type="number"
-                    min="1"
-                    value="1"
-                    class="border border-gray-300 rounded px-2 py-1 w-16"
-                  />
-                </td>
-                <td class="py-4">$2,500</td>
-                <td class="py-4">
-                  <button class="text-red-500">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th colspan="3" class="text-right py-4">
-                  Total
-                </th>
-                <th class="py-4">$4,000</th>
-                <th></th>
-              </tr>
-            </tfoot>
-          </table>
-          <div class="text-right mt-4">
-            <button class="bg-gray-300 px-4 py-2 rounded mr-3">Update</button>
-            <a href="#" class="bg-green-500 text-white px-4 py-2 rounded">
-              Checkout
-            </a>
-          </div>
+
+                      {/* Cart Section */}
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="p-6">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Your Shopping Cart</h1>
+                <p class="text-gray-600 mb-6">Review your items before checkout</p>
+                
+                <div class="overflow-x-auto">
+                    <table class="cart-table w-full">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Product</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Price</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Qty</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Amount</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="transition-colors duration-150">
+                                <td class="py-4 px-4">
+                                    <div class="flex items-center">
+                                        <img src="https://images.unsplash.com/photo-1626808642875-0aa545482dfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" 
+                                             class="w-16 h-16 object-contain rounded-lg border mr-4"/>
+                                        <span class="font-medium text-gray-800">Optoma 4K HDR Projector</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-4 font-medium text-gray-800">$1,500</td>
+                                <td class="py-4 px-4">
+                                    <input type="number" min="1" value="1" 
+                                           class="w-20 border border-gray-300 rounded-lg py-2 px-3 text-center focus:ring-primary focus:border-primary"/>
+                                </td>
+                                <td class="py-4 px-4 font-medium text-gray-800">$1,500</td>
+                                <td class="py-4 px-4">
+                                    <button class="text-danger hover:text-red-700 transition-colors">
+                                        <i class="fas fa-times text-xl"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="transition-colors duration-150">
+                                <td class="py-4 px-4">
+                                    <div class="flex items-center">
+                                        <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" 
+                                             class="w-16 h-16 object-contain rounded-lg border mr-4"/>
+                                        <span class="font-medium text-gray-800">HP Envy Specter 360</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-4 font-medium text-gray-800">$2,500</td>
+                                <td class="py-4 px-4">
+                                    <input type="number" min="1" value="1" 
+                                           class="w-20 border border-gray-300 rounded-lg py-2 px-3 text-center focus:ring-primary focus:border-primary"/>
+                                </td>
+                                <td class="py-4 px-4 font-medium text-gray-800">$2,500</td>
+                                <td class="py-4 px-4">
+                                    <button class="text-danger hover:text-red-700 transition-colors">
+                                        <i class="fas fa-times text-xl"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="bg-gray-50">
+                            <tr>
+                                <th colspan="3" class="text-right py-4 px-4 font-semibold text-gray-700">Total</th>
+                                <th class="py-4 px-4 font-semibold text-gray-800">$4,000</th>
+                                <th class="py-4 px-4"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                
+                <div class="mt-6 flex flex-col sm:flex-row justify-end gap-3">
+                    <button class="px-5 py-2.5 border hover:bg-red-600   rounded-lg  font-medium">
+                        <i class="fas fa-sync-alt mr-2"></i> Update Cart
+                    </button>
+                    <button class="px-5 py-2.5   hover:bg-red-500  rounded-lg  flex items-center">
+                        <i class="fas fa-shopping-cart mr-2"></i> Proceed to Checkout
+                    </button>
+                </div>
+            </div>
         </div>
-      </main>
+        
+        <div class="max-w-4xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-5 rounded-xl shadow-sm">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                        <i class="fas fa-shipping-fast text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-1">Free Shipping</h3>
+                        <p class="text-gray-600 text-sm">On orders over $100</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-5 rounded-xl shadow-sm">
+                <div class="flex items-start">
+                    <div class="bg-green-100 p-3 rounded-lg mr-4">
+                        <i class="fas fa-undo text-success text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-1">Easy Returns</h3>
+                        <p class="text-gray-600 text-sm">30-day satisfaction guarantee</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-5 rounded-xl shadow-sm">
+                <div class="flex items-start">
+                    <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                        <i class="fas fa-shield-alt text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-1">Secure Checkout</h3>
+                        <p class="text-gray-600 text-sm">SSL encrypted payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
       <footer class="bg-gray-900 text-white pt-12 pb-6">
         <div class="container mx-auto px-4">

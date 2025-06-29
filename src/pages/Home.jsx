@@ -48,9 +48,9 @@ const Home = () => {
     <div>
       <header>
         {/* <!-- Top Nav Bar --> */}
-        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black">
+        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black p-2">
           <nav>
-            <ul class="sm:flex gap-4 bg-amber-400">
+            <ul class="sm:flex gap-4">
               <li class="">
                 <a
                   href="tel:+123-456-7890"
@@ -114,6 +114,10 @@ const Home = () => {
           </nav>
         </div>
 
+
+
+        {/* Lower Than top nav bar */}
+
         <div class="md:flex  md:items-center md:justify-between px-2">
           <Link to="/" class=" block text-center">
             E-Commerce
@@ -135,7 +139,7 @@ const Home = () => {
               </form>
 
               <nav>
-                <ul class=" bg-red-500 justify-around gap-2 hidden md:flex">
+                <ul class="justify-around gap-2 hidden md:flex">
                   <li>
                     <Link to="">Home</Link>
                   </li>
@@ -212,7 +216,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div class="bg-red-600 flex gap-3 justify-center">
+          <div class="flex gap-3 justify-center">
             <a href="#" class="flex items-center gap-1 hover:fill-pink-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

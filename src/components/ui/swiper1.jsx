@@ -18,7 +18,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-
 function SwiperComponentForLatestProducts() {
   const swiperRef = useRef(null);
 
@@ -38,23 +37,28 @@ function SwiperComponentForLatestProducts() {
     <div>
       <Swiper
         spaceBetween={20} // Adjust spacing between slides
-        slidesPerView={4} // Show two slides at a time
         loop={true} // Enable looping of slides
         onSwiper={(swiper) => (swiperRef.current = swiper)} // Store swiper instance in ref
         modules={[Navigation]} // Include Navigation module
+        breakpoints={{
+          // Define breakpoints for responsiveness
+          640: {
+            slidesPerView: 1, // 1 slide for screens >= 640px
+          },
+          768: {
+            slidesPerView: 2, // 2 slides for screens >= 768px
+          },
+          1024: {
+            slidesPerView: 3, // 3 slides for screens >= 1024px
+          },
+          1280: {
+            slidesPerView: 4, // 4 slides for screens >= 1280px
+          },
+        }}
       >
         <SwiperSlide>
           <Card className="w-full max-w-sm">
             <CardHeader>
-              <CardTitle>Login to your account</CardTitle>
-              <CardDescription>
-                Enter your email below to login to your account
-              </CardDescription>
-              <CardAction>
-                <Button variant="link">Sign Up</Button>
-              </CardAction>
-            </CardHeader>
-            <CardContent>
               <Link to="">
                 <img
                   src="../../../image-1.jpg"
@@ -62,13 +66,18 @@ function SwiperComponentForLatestProducts() {
                   className="w-full h-auto"
                 />
               </Link>
+
+              <CardTitle className="text-center">
+                Sony Alpha DSLR Camera
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <h1 className="line-through font-extralight">$5000</h1>
+              <h1 className="font-bold text-2xl">$500</h1>
             </CardContent>
             <CardFooter className="flex-col gap-2">
               <Button type="submit" className="w-full">
-                Login
-              </Button>
-              <Button variant="outline" className="w-full">
-                Login with Google
+                Add To Cart
               </Button>
             </CardFooter>
           </Card>
@@ -77,29 +86,25 @@ function SwiperComponentForLatestProducts() {
         <SwiperSlide>
           <Card className="w-full max-w-sm">
             <CardHeader>
-              <CardTitle>Login to your account</CardTitle>
-              <CardDescription>
-                Enter your email below to login to your account
-              </CardDescription>
-              <CardAction>
-                <Button variant="link">Sign Up</Button>
-              </CardAction>
-            </CardHeader>
-            <CardContent>
               <Link to="">
                 <img
-                  src="../../../image-2.jpg"
+                  src="../../../image-1.jpg"
                   alt="Slide 1"
                   className="w-full h-auto"
                 />
               </Link>
+
+              <CardTitle className="text-center">
+                Sony Alpha DSLR Camera
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <h1 className="line-through font-extralight">$5000</h1>
+              <h1 className="font-bold text-2xl">$500</h1>
             </CardContent>
             <CardFooter className="flex-col gap-2">
               <Button type="submit" className="w-full">
-                Login
-              </Button>
-              <Button variant="outline" className="w-full">
-                Login with Google
+                Add To Cart
               </Button>
             </CardFooter>
           </Card>
@@ -108,29 +113,25 @@ function SwiperComponentForLatestProducts() {
         <SwiperSlide>
           <Card className="w-full max-w-sm">
             <CardHeader>
-              <CardTitle>Login to your account</CardTitle>
-              <CardDescription>
-                Enter your email below to login to your account
-              </CardDescription>
-              <CardAction>
-                <Button variant="link">Sign Up</Button>
-              </CardAction>
-            </CardHeader>
-            <CardContent>
               <Link to="">
                 <img
-                  src="../../../image-2.jpg"
+                  src="../../../image-1.jpg"
                   alt="Slide 1"
                   className="w-full h-auto"
                 />
               </Link>
+
+              <CardTitle className="text-center">
+                Sony Alpha DSLR Camera
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <h1 className="line-through font-extralight">$5000</h1>
+              <h1 className="font-bold text-2xl">$500</h1>
             </CardContent>
             <CardFooter className="flex-col gap-2">
               <Button type="submit" className="w-full">
-                Login
-              </Button>
-              <Button variant="outline" className="w-full">
-                Login with Google
+                Add To Cart
               </Button>
             </CardFooter>
           </Card>
@@ -139,65 +140,56 @@ function SwiperComponentForLatestProducts() {
         <SwiperSlide>
           <Card className="w-full max-w-sm">
             <CardHeader>
-              <CardTitle>Login to your account</CardTitle>
-              <CardDescription>
-                Enter your email below to login to your account
-              </CardDescription>
-              <CardAction>
-                <Button variant="link">Sign Up</Button>
-              </CardAction>
-            </CardHeader>
-            <CardContent>
               <Link to="">
                 <img
-                  src="../../../image-3.jpg"
+                  src="../../../image-1.jpg"
                   alt="Slide 1"
                   className="w-full h-auto"
                 />
               </Link>
+
+              <CardTitle className="text-center">
+                Sony Alpha DSLR Camera
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <h1 className="line-through font-extralight">$5000</h1>
+              <h1 className="font-bold text-2xl">$500</h1>
             </CardContent>
             <CardFooter className="flex-col gap-2">
               <Button type="submit" className="w-full">
-                Login
-              </Button>
-              <Button variant="outline" className="w-full">
-                Login with Google
+                Add To Cart
               </Button>
             </CardFooter>
           </Card>
         </SwiperSlide>
 
-           <SwiperSlide>
+        <SwiperSlide>
           <Card className="w-full max-w-sm">
             <CardHeader>
-              <CardTitle>Login to your account</CardTitle>
-              <CardDescription>
-                Enter your email below to login to your account
-              </CardDescription>
-              <CardAction>
-                <Button variant="link">Sign Up</Button>
-              </CardAction>
-            </CardHeader>
-            <CardContent>
               <Link to="">
                 <img
-                  src="../../../image-3.jpg"
+                  src="../../../image-1.jpg"
                   alt="Slide 1"
                   className="w-full h-auto"
                 />
               </Link>
+
+              <CardTitle className="text-center">
+                Sony Alpha DSLR Camera
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <h1 className="line-through font-extralight">$5000</h1>
+              <h1 className="font-bold text-2xl">$500</h1>
             </CardContent>
             <CardFooter className="flex-col gap-2">
               <Button type="submit" className="w-full">
-                Login
-              </Button>
-              <Button variant="outline" className="w-full">
-                Login with Google
+                Add To Cart
               </Button>
             </CardFooter>
           </Card>
         </SwiperSlide>
-     
       </Swiper>
 
       {/* Previous and Next Buttons */}

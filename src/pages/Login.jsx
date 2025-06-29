@@ -134,7 +134,7 @@ const Login = () => {
               </form>
 
               <nav>
-                <ul class=" bg-red-500 justify-around gap-2 hidden md:flex">
+                <ul class="  justify-around gap-2 hidden md:flex">
                   <li>
                     <a href="">Home</a>
                   </li>
@@ -211,7 +211,7 @@ const Login = () => {
             </div>
           </div>
 
-          <div class="bg-red-600 flex gap-3 justify-center">
+          <div class="flex gap-3 justify-center">
             <a href="#" class="flex items-center gap-1 hover:fill-pink-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +279,7 @@ const Login = () => {
                       <Link to="/">Home</Link>
                     </li>
 
-                    <li class="group relative bg-pink-500 ">
+                    <li class="group relative">
                       <a
                         href="#"
                         class="flex items-center"
