@@ -10,6 +10,8 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet";
+import { Link } from "react-router-dom";
+
 
 const Product = () => {
   const [open, setOpened] = useState(false);
@@ -28,7 +30,7 @@ const Product = () => {
     <div>
       <header>
         {/* <!-- Top Nav Bar --> */}
-        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black">
+        <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black p-2">
           <nav>
             <ul class="sm:flex gap-4 bg-amber-400">
               <li class="">
@@ -118,7 +120,7 @@ const Product = () => {
               </form>
 
               <nav>
-                <ul class=" bg-red-500 justify-around gap-2 hidden md:flex">
+                <ul class="justify-around gap-2 hidden md:flex">
                   <li>
                   <Link to="/">Home</Link>
                   </li>
@@ -195,8 +197,10 @@ const Product = () => {
             </div>
           </div>
 
-          <div class="bg-red-600 flex gap-3 justify-center">
+          <div class="flex gap-3 justify-center">
+
             <a href="#" class="flex items-center gap-1 hover:fill-pink-400">
+             {/* Heart SVG Icon (Wishlist)  */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -204,9 +208,11 @@ const Product = () => {
               >
                 <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
               </svg>
+              {/* Wishlist Count */}
               <span class="font-semibold">0</span>
             </a>
             <a href="cart.html" class="flex items-center gap-1">
+            {/* Cart SVG Icon  */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class=" w-5 h-5"
@@ -216,11 +222,14 @@ const Product = () => {
               >
                 <path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
               </svg>
-
+              {/* Cart Item Count  */}
               <span class="font-semibold">2</span>
             </a>
 
+
+            {/* Total Price Display */}
             <a class="flex items-center gap-1">
+             {/* Price Tag SVG Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="fill-current w-5 h-5"
@@ -230,6 +239,7 @@ const Product = () => {
               >
                 <path d="M0 112.5L0 422.3c0 18 10.1 35 27 41.3c87 32.5 174 10.3 261-11.9c79.8-20.3 159.6-40.7 239.3-18.9c23 6.3 48.7-9.5 48.7-33.4l0-309.9c0-18-10.1-35-27-41.3C462 15.9 375 38.1 288 60.3C208.2 80.6 128.4 100.9 48.7 79.1C25.6 72.8 0 88.6 0 112.5zM288 352c-44.2 0-80-43-80-96s35.8-96 80-96s80 43 80 96s-35.8 96-80 96zM64 352c35.3 0 64 28.7 64 64l-64 0 0-64zm64-208c0 35.3-28.7 64-64 64l0-64 64 0zM512 304l0 64-64 0c0-35.3 28.7-64 64-64zM448 96l64 0 0 64c-35.3 0-64-28.7-64-64z" />
               </svg>
+              {/* Total Price Display  */}
               <span id="cart-total" class="font-semibold">
                 $4,000
               </span>

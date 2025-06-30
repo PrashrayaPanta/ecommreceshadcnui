@@ -29,7 +29,7 @@ const Cart = () => {
         {/* <!-- Top Nav Bar --> */}
         <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black p-2">
           <nav>
-            <ul class="sm:flex gap-4 bg-amber-400">
+            <ul class="sm:flex gap-4">
               <li class="">
                 <a
                   href="tel:+123-456-7890"
@@ -92,6 +92,8 @@ const Cart = () => {
             </ul>
           </nav>
         </div>
+
+        {/* Middle NavBar */}
 
         <div class="md:flex  md:items-center md:justify-between px-2">
           <a href="./index.html" class=" block text-center">
@@ -191,7 +193,7 @@ const Cart = () => {
             </div>
           </div>
 
-          <div class="bg-red-600 flex gap-3 justify-center">
+          <div class="flex gap-3 justify-center">
             <a href="#" class="flex items-center gap-1 hover:fill-pink-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
