@@ -11,6 +11,7 @@ import {
     SheetTrigger,
   } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
+import Star from "../components/ui/Star";
 
 
 const Product = () => {
@@ -25,6 +26,8 @@ const Product = () => {
   const handleClickedForBrandItem = () => {
     setopenBrandItem(!openBrandItem);
   };
+
+  const [rating, setRating] = useState(0);
 
   return (
     <div>
@@ -377,7 +380,7 @@ const Product = () => {
         </Sheet>
       </header>
 
-      <main class="container mx-auto px-4 py-8">
+      <main class="px-4 py-8 bg-red-600">
   
         <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
             <div class="flex flex-col lg:flex-row gap-8">
@@ -585,20 +588,26 @@ const Product = () => {
                             </div>
                             <div class="mb-4">
                                 <div class="flex items-center">
-                                    <span class="mr-2 text-gray-700">Rating:</span>
+                                    <span class="mr-2  text-gray-700">Rating:</span>
                                     <div class="flex space-x-1">
-                                        <input type="radio" id="rating-5" name="rating" value="5" class="hidden"/>
-                                        <label for="rating-5" class="text-2xl cursor-pointer text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="rating-4" name="rating" value="4" class="hidden"/>
-                                        <label for="rating-4" class="text-2xl cursor-pointer text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="rating-3" name="rating" value="3" class="hidden"/>
-                                        <label for="rating-3" class="text-2xl cursor-pointer text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="rating-2" name="rating" value="2" class="hidden"/>
-                                        <label for="rating-2" class="text-2xl cursor-pointer text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="rating-1" name="rating" value="1" checked class="hidden"/>
-                                        <label for="rating-1" class="text-2xl cursor-pointer text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
+                                        {
+                                          Array.from({ length: 5 }, (_, index) => ( 
+
+
+
+                                            <Star key={index} index={index} rating={rating} setRating={setRating}/>
+
+
+
+                                          ))
+
+                                        }
+
+                                 
                                     </div>
+                                 
                                 </div>
+                                <h1>{rating}</h1>
                             </div>
                             <button class="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition">
                                 Add Review

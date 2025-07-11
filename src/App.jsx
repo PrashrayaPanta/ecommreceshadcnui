@@ -8,6 +8,10 @@ import Cart from "./pages/Cart";
 import Product from "./pages/Product";
 import Home from "./pages/Home";
 
+import { Dashboard } from "./pages/Dashboard";
+
+
+
 function App() {
   const [open, setOpened] = useState(false);
 
@@ -36,6 +40,9 @@ function App() {
           <Route path="/cart" element={<Cart />} />
 
           <Route path="/product" element={<Product />} />
+
+
+          <Route path="/dashboard" element={<Dashboard/>}/>
         </Routes>
       </BrowserRouter>
     </>
