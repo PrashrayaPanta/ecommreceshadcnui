@@ -1,17 +1,20 @@
 import React from "react";
 
-const Star = ({index, rating, setRating}) => {
+const Star = ({ index, rating, setRating }) => {
+  const handleClick = () => {
+    setRating(index + 1);
+  };
 
-    const handleClick = () => {
-        setRating(index + 1);
-    }
-
-    console.log(rating);
-    
+  console.log(rating);
 
   return (
     <div>
-      <i className={`bx ${rating >= index + 1 ? "bxs-star":"bx-star"}  text-green-800 text-5xl` } onClick={handleClick} ></i>
+      <i
+        className={`${
+          rating >= index + 1 ? "fas fa-star" : "far fa-star"
+        } text-green-800 text-5xl cursor-pointer`}
+        onClick={() => handleClick(index + 1)}
+      />
     </div>
   );
 };

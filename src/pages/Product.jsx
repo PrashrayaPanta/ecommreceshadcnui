@@ -72,7 +72,7 @@ const Product = () => {
             <ul class="sm:flex sm:gap-2">
               <li class="">
                 <a
-                  href="./register.html"
+                  href="/register"
                   class="flex items-center justify-center"
                 >
                   <svg
@@ -87,7 +87,7 @@ const Product = () => {
               </li>
 
               <li class="sm:before:content-['|'] sm:flex">
-                <a href="./login.html" class="flex items-center justify-center">
+                <a href="/login" class="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -214,7 +214,7 @@ const Product = () => {
               {/* Wishlist Count */}
               <span class="font-semibold">0</span>
             </a>
-            <a href="cart.html" class="flex items-center gap-1">
+            <a href="/cart" class="flex items-center gap-1">
             {/* Cart SVG Icon  */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

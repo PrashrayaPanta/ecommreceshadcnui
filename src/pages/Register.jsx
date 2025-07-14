@@ -10,8 +10,8 @@ import {
 
 import { Button } from "@/components/ui/button";
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+// import { Input } from "@/components/ui/input";
+// import { Label } from "@/components/ui/label";
 
 import {
   Card,
@@ -42,7 +42,7 @@ const Register = () => {
         {/* <!-- Top Nav Bar --> */}
         <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black p-2">
           <nav>
-            <ul class="sm:flex gap-4 bg-amber-400">
+            <ul class="sm:flex gap-4">
               <li class="">
                 <a
                   href="tel:+123-456-7890"
@@ -127,7 +127,7 @@ const Register = () => {
               </form>
 
               <nav>
-                <ul class=" bg-red-500 justify-around gap-2 hidden md:flex">
+                <ul class=" justify-around gap-2 hidden md:flex">
                   <li>
                     <Link to="/">Home</Link>
                   </li>
@@ -204,7 +204,7 @@ const Register = () => {
             </div>
           </div>
 
-          <div class="bg-red-600 flex gap-3 justify-center">
+          <div class="flex gap-3 justify-center">
             <a href="#" class="flex items-center gap-1 hover:fill-pink-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +272,7 @@ const Register = () => {
                       <a href="">Home</a>
                     </li>
 
-                    <li class="group relative bg-pink-500 ">
+                    <li class="group relative">
                       <a
                         href="#"
                         class="flex items-center"
@@ -377,40 +377,95 @@ const Register = () => {
       </header>
 
       <main className="flex justify-center">
-        <Card class="w-full max-w-lg">
+        <Card class="w-full max-w-sm">
           <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-            <CardAction>Card Action</CardAction>
+            <CardTitle>Register</CardTitle>
           </CardHeader>
           <CardContent>
             <form>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-2">
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="m@example.com"
-                    required
+                  <div className="flex">
+                    <label htmlFor="email">Username</label>
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-red-500"
+                      height="18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M12 6v12"></path>
+                      <path d="M17.196 9 6.804 15"></path>
+                      <path d="m6.804 9 10.392 6"></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    className="border-2 focus:outline-none focus rounded-sm px-2 h-10 focus:border-blue-400 focus:invalid:border-red-400 required:border-pink-400"
+                    placeholder="Enter Your Email"
                   />
                 </div>
                 <div className="grid gap-2">
-                  <div className="flex items-center">
-                    <Label htmlFor="password">Password</Label>
-                    <a
-                      href="#"
-                      className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                  <div className="flex">
+                    <label htmlFor="email">Email</label>
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-red-500"
+                      height="18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      Forgot your password?
-                    </a>
+                      <path d="M12 6v12"></path>
+                      <path d="M17.196 9 6.804 15"></path>
+                      <path d="m6.804 9 10.392 6"></path>
+                    </svg>
                   </div>
-                  <Input id="password" type="password" required />
+                  <input
+                    type="email"
+                    className="border-2 focus:outline-none focus rounded-sm px-2 h-10 focus:border-blue-400 focus:invalid:border-red-400 required:border-pink-400"
+                    placeholder="Enter Your Email"
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <div className="flex">
+                    <label htmlFor="email">Password</label>
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-red-500"
+                      height="18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M12 6v12"></path>
+                      <path d="M17.196 9 6.804 15"></path>
+                      <path d="m6.804 9 10.392 6"></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="password"
+                    className="border-2 focus:outline-none focus rounded-sm px-2 h-10 focus:border-blue-400 focus:invalid:border-red-400 required:border-pink-400"
+                    placeholder="Enter Your password"
+                  />
                 </div>
               </div>
             </form>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="mt-3 mb-3">
             <Button type="submit" className="w-full">
               Register
             </Button>
