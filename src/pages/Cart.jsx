@@ -389,7 +389,7 @@ const Cart = () => {
       </header>
 
       {/* Cart Section */}
-      <div className="px-2 py-8 bg-red-500">
+      <div className="px-2 py-8">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden ">
           <div className="p-6">
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
@@ -453,7 +453,7 @@ const Cart = () => {
                       </button>
                     </td>
                   </tr>
-                  <tr className="transition-colors duration-150 bg-red-400" >
+                  <tr className="transition-colors duration-150" >
                     <td className="py-4 px-4">
                       <div className="flex items-center">
                         <img

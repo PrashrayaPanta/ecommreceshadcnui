@@ -35,7 +35,7 @@ const Product = () => {
         {/* <!-- Top Nav Bar --> */}
         <div class="sm:flex sm:justify-between sm:items-center sm:px-2 text-white bg-black p-2">
           <nav>
-            <ul class="sm:flex gap-4 bg-amber-400">
+            <ul class="sm:flex gap-4">
               <li class="">
                 <a
                   href="tel:+123-456-7890"
@@ -380,14 +380,18 @@ const Product = () => {
         </Sheet>
       </header>
 
-      <main class="px-4 py-8 bg-red-600">
+      <main class="px-4 py-8">
   
         <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
             <div class="flex flex-col lg:flex-row gap-8">
-            
-                <div class="lg:w-5/12">
+                  
+
+                  {/* Img part */}
+                <div class="lg:w-5/12 bg-red-400">
                     <div class="mb-4 border-2 border-gray-200 rounded-xl overflow-hidden">
-                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96" id="main-image"></div>
+
+                      <img src="../image-1.jpg" alt="" srcset="" />
+                        {/* <div class="bg-blue-400 border-2 border-dashed rounded-xl w-full h-96" id="main-image"></div> */}
                     </div>
                     <div class="grid grid-cols-4 gap-2">
                         <div class="cursor-pointer border-2 border-gray-200 rounded-lg overflow-hidden hover:border-alien-green transition" 

@@ -23,7 +23,7 @@ const Home = () => {
       initialPrice: 1000,
       discountedPrice: 500,
       finalPrice: 500,
-      image: "../image-2.jpg",
+      image: "../image-1.jpg",
     },
 
     {
@@ -38,7 +38,7 @@ const Home = () => {
       initialPrice: 1000,
       discountedPrice: 500,
       finalPrice: 500,
-      image: "../image-2.jpg",
+      image: "../image-3.jpg",
     },
   ];
 
@@ -112,7 +112,7 @@ const Home = () => {
 
               <li className="sm:before:content-['|'] sm:flex">
                 <Link
-                  href="/login"
+                  to="/login"
                   className="flex items-center justify-center"
                 >
                   <svg
@@ -150,7 +150,7 @@ const Home = () => {
               </form>
 
               <nav>
-                <ul className="  justify-around gap-2 hidden md:flex">
+                <ul className="justify-around gap-2 hidden md:flex">
                   <li>
                     <a href="">Home</a>
                   </li>
@@ -245,7 +245,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex gap-3 justify-center  items-center bg-amber-300">
+          <div className="flex gap-3 justify-center  items-center">
             <a href="#" className="flex items-center gap-1 hover:fill-pink-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
